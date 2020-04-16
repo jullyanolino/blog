@@ -22,11 +22,10 @@ A typical malware infection vector is a Word document that runs a macro and open
 In terms of human language we will say:
 `Give me all the word processes whose direct child is a cmd.`
 
-In elastic we will do somthing like:
-`Image:word.exe`
-And for each of the results make a new query like:
-`ParentProcessId:xxxx AND Image:cmd.exe`
-If the first result returns a thousand results, then we have to do a thousand new queries to find the children of each of that process.
+In elastic we will do something like:
+`ParentImage:word.exe AND Image:cmd.exe`
+If the query does not give us any results, it means that the malicious execution can have 3 or more levels.
+This involves a query to get all the ProcessCreation events with a parent "word.exe" and, a new query for each result getting all the processes "cmd.exe" executed by the one with the same ProcessGUID as the result: `ProcessGUID:xxxx AND Image:cmd.exe`. If there are more intermediate processes, it becomes increasingly difficult.
 
 Instead, with ArangoDB we will use only one query:
 ```
@@ -45,3 +44,9 @@ The result has all the word processes that have a cmd.exe child or grandchild.
 * `FILTER endProcess.Image == "cmd.exe"`: The child or grandchild process must be a "cmd.exe".
 * `RETURN {'start' : startProcess,'end' : endProcess}`: Create a new object and return both the start and end nodes.
 
+
+## Final Result
+
+The script can be found in: https://github.com/SecSamDev/sysmon-arangodb
+
+![](https://raw.githubusercontent.com/SecSamDev/sysmon-arangodb/master/Sysmon-graph.png)
