@@ -47,6 +47,6 @@ The result has all the word processes that have a cmd.exe child or grandchild.
 
 ## Final Result
 
-The script can be found in: https://github.com/SecSamDev/sysmon-arangodb
+The script can be found in: [https://github.com/SecSamDev/sysmon-arangodb](https://github.com/SecSamDev/sysmon-arangodb)
 
 ![](https://raw.githubusercontent.com/SecSamDev/sysmon-arangodb/master/Sysmon-graph.png)
