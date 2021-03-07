@@ -18,7 +18,7 @@ Returning to the main topic, the other daily task was Integrate security devices
 ![Exporting regex](https://raw.githubusercontent.com/SecSamDev/grok-vscode/master/doc/grok-export.gif)
 
 
-And finally, one of the last tools to be born was **[VirusTotal] (https://marketplace.visualstudio.com/items?itemName=SecSamDev.virustotal)**, to incorporate a functionality similar to [Munin] (https: //github.com/Neo23x0/munin) but within an IDE.
+And finally, one of the last tools to be born was **[VirusTotal](https://marketplace.visualstudio.com/items?itemName=SecSamDev.virustotal)**, to incorporate a functionality similar to [Munin] (https: //github.com/Neo23x0/munin) but within an IDE.
 With this I could have a simple Munin. The next step is to be able to share a common database using a shared folder with other analysts on my team. 
 
 ![Analyze list of IOCs](https://raw.githubusercontent.com/SecSamDev/vscode-virustotal/main/doc/ImportIOClist.jpg)
