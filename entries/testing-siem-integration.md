@@ -17,7 +17,7 @@ And the test code is easy to follow:
 ```rust
 #[test]
 fn test_squid_integration() {
-    // Use CI_CD var to enable the integration tests as to never fail when testing in a local environment
+    // Use CI_CD var to enable the integration tests and to never fail when testing in a local environment
     let out_dir = env::var("CI_CD").unwrap_or(String::from(""));
     if out_dir == "" {
         return;
@@ -27,7 +27,7 @@ fn test_squid_integration() {
         .proxy(reqwest::Proxy::http("http://127.0.0.1:3128").unwrap())
         .build()
         .unwrap();
-    // Check that SquidGuard is listening if the log is created
+    // SquidGuard is listening if the log is created
     let res = client.get("http://127.0.0.1:80/squidGuard.log").send().unwrap();
 
     if !res.status().is_success() {
