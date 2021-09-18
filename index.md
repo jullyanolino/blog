@@ -1,9 +1,11 @@
 # A blog about information security
-<img align="left" width="80" height="80" src="https://github.com/SecSamDev/secsamdev.github.io/raw/master/assets/img/achievement.svg" alt="Throphy room">
-### [Trophy Room](./trophy-room.html)
+
+### 🏆 [Trophy Room](./trophy-room.html)
 
 
-### [Interesting Blogs](./entries/interesting-blogs.md)
+### 📚 [Interesting Blogs](./entries/interesting-blogs.md)
+
+### 🛠️ [Projects](./entries/projects.md)
 
 ## Last Blog entries
 
@@ -14,5 +16,5 @@
 * **20/04/2020**  [Interesting Blogs](./entries/interesting-blogs.md)
 * **15/04/2020**  [Threat Hunting with Sysmon and Graphs](./entries/sysmon-graph.html).
 
-
 ## Old entries
+
