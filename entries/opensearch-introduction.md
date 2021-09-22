@@ -204,6 +204,7 @@ Los permisos a nivel de cluster necesarios son:
 * cluster:monitor/state
 * cluster:admin/ingest/pipeline/put
 * cluster:admin/ingest/pipeline/get
+
 Y a nivel de indice `filebeat-*`
 * write
 * indices:admin/template/put
@@ -293,19 +294,20 @@ for i in {1..10}; do curl --proxy 10.20.0.253:3128 https://github.com/; done
 Obviamente esta regla no sirve de mucho pero nos podemos hacer una idea de las posibilidades.
 
 ### Detección de anomalias
-Este apartado es ligeramente distinto aunque en el fondo es crear reglas para detectar anomalías. La anomalía no es otra cosa que una desviación de l os rangos que calcula dinámicamente un algoritmo de Machine Learning. 
+Este apartado es ligeramente distinto aunque en el fondo es crear reglas para detectar anomalías. La anomalía no es otra cosa que una desviación de los rangos (equivalente a el umbral establecido en un monitor) que calcula dinámicamente un algoritmo de Machine Learning. 
 
-Y la verdad que es muy sencillo de trabajar. Cuando creamos un *Detector*, establecemos unas condiciones de filtrado así como una ventana de tiempo. Tras este paso se establecen las *features* o características que alimentaran a nuestro modelo de ML.
+Y la verdad que es muy sencillo de trabajar. Cuando creamos un *Detector* establecemos unas condiciones de filtrado así como una ventana de tiempo. Tras este paso se establecen las *features* o características que alimentaran a nuestro modelo de ML.
 
 El parámetro *window delay* como su nombre indica hace que la query se realice a distinto intervalo de tiempo ya que por ejemplo una periodicidad de 30 minutos siempre hará las querys a y 30 minutos o a en punto y si tardamos por ejemplo 10 minutos en procesar los logs antes de indexarlos en OpenSearch y que estén disponibles a los usuarios estaremos perdiendo un tercio de los logs.
 [Más sobre detección de anomalías](https://opensearch.org/docs/monitoring-plugins/ad/index/)
 
 ### Notebooks
-Básicamente un *notebook* nos va a permitir mantener de forma colaborativa un informe de un incidente. Pudiendo añadir querys con resultados así como gráficos. 
+Básicamente un *notebook* nos va a permitir mantener de forma colaborativa un informe de un incidente pudiendo añadir los resultados de querys así como gráficos. Es muy similar a las *stories* de TimeSketch, aunque en este caso tendremos que controlar el tiempo absoluto de las querys ya que continuamente se están ingestando nuevos logs en el sistema.
+
 Las notas a añadir son tres:
 * Notas de texto en markdown
-* Notas que son resultado de una query SQL
-* Notas que son resultado de una query PPL
+* Resultado de búsqueda SQL
+* Resultado de búsqueda ppl
 
 ![](/assets/img/opnsearch/Clipboard_2021-09-22-22-52-22.png)
 
