@@ -293,6 +293,27 @@ for i in {1..10}; do curl --proxy 10.20.0.253:3128 https://github.com/; done
 
 Obviamente esta regla no sirve de mucho pero nos podemos hacer una idea de las posibilidades.
 
+Hay más opciones como utilizar umbrales teniendo en cuenta detectores de anomalías o incluso ejecución de scripts:
+```groovy
+// Performs some crude custom scoring and returns true if that score exceeds a certain value
+int score = 0;
+for (int i = 0; i < ctx.results[0].hits.hits.length; i++) {
+  // Weighs 500 errors 10 times as heavily as 503 errors
+  if (ctx.results[0].hits.hits[i]._source.http_status_code == "500") {
+    score += 10;
+  } else if (ctx.results[0].hits.hits[i]._source.http_status_code == "503") {
+    score += 1;
+  }
+}
+if (score > 99) {
+  return true;
+} else {
+  return false;
+}
+```
+
+[Documentación Trigers](https://opensearch.org/docs/monitoring-plugins/alerting/monitors/#create-triggers)
+
 ### Detección de anomalias
 Este apartado es ligeramente distinto aunque en el fondo es crear reglas para detectar anomalías. La anomalía no es otra cosa que una desviación de los rangos (equivalente a el umbral establecido en un monitor) que calcula dinámicamente un algoritmo de Machine Learning. 
 
