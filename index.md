@@ -9,6 +9,7 @@
 
 ## Last Blog entries
 
+* **22/09/2021**  [OpenSearch Introduction](./entries/opensearch-introduction)
 * **24/04/2021**  [uSIEM NextGen SIEM or alredy dead?](./entries/next-gen-siem-thoughts.md)
 * **13/03/2021**  [When CI/CD meets Security](./entries/testing-siem-integration.md)
 * **07/03/2021**  [uSIEM](./entries/usiem-framework.md)
