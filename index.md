@@ -9,7 +9,8 @@
 
 ## Last Blog entries
 
-* **22/09/2021**  [OpenSearch Introduction](./entries/opensearch-introduction)
+* **22/12/2021**  [Windows Server DHCP and DNS logs](./entries/logs-windows.md)
+* **22/09/2021**  [OpenSearch Introduction](./entries/opensearch-introduction.md)
 * **24/04/2021**  [uSIEM NextGen SIEM or alredy dead?](./entries/next-gen-siem-thoughts.md)
 * **13/03/2021**  [When CI/CD meets Security](./entries/testing-siem-integration.md)
 * **07/03/2021**  [uSIEM](./entries/usiem-framework.md)
