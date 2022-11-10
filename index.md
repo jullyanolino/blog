@@ -2,7 +2,7 @@
 
 ### 🛠️ [Projects](./entries/projects.md)
 
-### 🛠️ [Knowledge Base](./entries/knowledgebase.md)
+### 📚 [Knowledge Base](./entries/knowledgebase.md)
 
 ### 🏆 [Conquests](./conquests.html)
 
