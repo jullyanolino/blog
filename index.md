@@ -1,22 +1,12 @@
 # A blog about information security
 
-### 🏆 [Trophy Room](./trophy-room.html)
-
-
-### 📚 [Interesting Blogs](./entries/interesting-blogs.md)
-
 ### 🛠️ [Projects](./entries/projects.md)
 
-## Last Blog entries
+### 🛠️ [Knowledge Base](./entries/knowledgebase.md)
 
-* **22/12/2021**  [Windows Server DHCP and DNS logs](./entries/logs-windows.md)
-* **22/09/2021**  [OpenSearch Introduction](./entries/opensearch-introduction.md)
-* **24/04/2021**  [uSIEM NextGen SIEM or alredy dead?](./entries/next-gen-siem-thoughts.md)
-* **13/03/2021**  [When CI/CD meets Security](./entries/testing-siem-integration.md)
-* **07/03/2021**  [uSIEM](./entries/usiem-framework.md)
-* **07/03/2021**  [New VSCode extensions](./entries/vscode-extensions.md)
-* **20/04/2020**  [Interesting Blogs](./entries/interesting-blogs.md)
-* **15/04/2020**  [Threat Hunting with Sysmon and Graphs](./entries/sysmon-graph.html).
+### 🏆 [Conquests](./conquests.html)
 
-## Old entries
+## Blog entries
 
+* **11/10/2022**  [Entanglement in Time](./entries/entanglement_in_time.md)
+* **22/09/2021**  [Parallel Universes](./entries/parallel_universes.md)
