@@ -1,4 +1,4 @@
-# A blog about information security
+# A blog about personal interests
 
 ### 🛠️ [Projects](./entries/projects.md)
 
